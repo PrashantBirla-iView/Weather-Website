@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.city-name {
+  height: fit-content;
+  opacity: 0;
+}
+
+.locations button {
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border: unset;
+  border-radius: 0.5rem;
+  color: floralwhite;
+  z-index: 1;
+  background: #000;
+  position: relative;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+}
+
+.locations button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  /* width: 0; */
+  border-radius: 15px;
+  background-color: #198754;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+}
+
+.locations button:hover {
+  color: #fff;
+  border-color: #198754;
+}
+
+.locations button:hover::before {
+  width: 100%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./Image/Sunny.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.temperature {
+  display: flex;
+  height: 10rem;
+  width: 25rem;
+  align-items: center;
+  justify-content: space-evenly;
+  color: floralwhite;
+  margin: 35rem 25rem 0rem 0rem;
+  /* background: cadetblue; */
+}
+
+.weather {
+  display: flex;
+  justify-content: end;
+}
+
+.weather-detail-container {
+  display: flex;
+  flex-direction: column;
+  width: 35rem;
+  height: 100vh;
+  background: #000;
+  padding: 1rem;
+  opacity: 0.5;
+}
+
+hr {
+  background-color: #20c997;
+  height: 0.2rem;
+}
+
+.locations {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: 1rem;
+  padding: 2rem 0rem 2rem 0rem;
+  /* margin: 1rem; */
+  /* color: floralwhite; */
+  /* background: #b43434; */
+}
+
+.weather-details {
+  margin: 1rem 1rem 0rem 1rem;
+  color: floralwhite;
+}
+
+.about-weather span {
+  display: flex;
+  margin: 2rem 0 0 0;
+  /* background: #20c997; */
+  align-items: center;
+  justify-content: space-between;
+}
+
+.value {
+  display: flex;
+}
+
+@media all and (max-width: 1399px) {
+  .weather-detail-container {
+    height: 100vh;
+  }
+
+  .temperature {
+    margin: 28rem 25rem 0 5rem;
+
+}
+
+@media all and (max-width: 1100px) {
+  .weather-detail-container #city {
+    width: 10rem;
+  }
+
+  .temperature {
+    margin: 15rem;
+  }
+}
+
+@media all and (max-width: 950px) {
+  .temperature {
+    height: 15rem;
+    display: inline-block;
+    flex-direction: column;
+  }
+
+  .temperature #cloud {
+    margin: -14rem 0rem 0rem 9rem;
+  }
+
+  .temperature #date-time {
+    margin: 1rem 4rem 1rem 0rem;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .weather-detail-container {
+    background-color: transparent;
+    background: none;
+    opacity: 1;
+  }
+
+  /* Search Bar */
+  .d-flex {
+    margin-left: -12rem;
+  }
+
+  /* City Dropdown */
+  .city-name {
+    opacity: 1;
+    margin: 1rem -40rem 0rem 0rem;
+  }
+
+  .temperature {
+    margin: 12rem -6rem 0rem 0rem;
+    width: fit-content;
+    color: white;
+  }
+
+  .locations {
+    opacity: 0;
+  }
+
+  hr {
+    visibility: hidden;
+  }
+
+  .temperature #cloud {
+    margin: -14rem 0rem 0rem 9rem;
+  }
+
+  .temperature #date-time {
+    margin: 1rem 4rem 1rem 0rem;
+  }
+
+  .weather-details {
+    margin: -9rem 1rem 1rem 18rem;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .weather-detail-container {
+    background-color: transparent;
+    background: none;
+    opacity: 1;
+  }
+
+  /* Search Bar */
+  .d-flex {
+    margin: 0rem 0rem 0rem -4rem;
+  }
+
+  /* City Dropdown */
+  .city-name {
+    opacity: 1;
+    margin: 1rem -31rem 0rem 0rem;
+  }
+
+  .temperature {
+    margin: 13rem -14rem 0rem 0rem;
+    width: fit-content;
+    color: white;
+  }
+
+  .locations {
+    opacity: 0;
+  }
+
+  hr {
+    visibility: hidden;
+  }
+
+  .temperature #cloud {
+    margin: -14rem 0rem 0rem 9rem;
+  }
+
+  .temperature #date-time {
+    margin: 1rem 4rem 1rem 0rem;
+  }
+
+  .weather-details {
+    margin: -7rem 5rem 0rem 16rem;
+  }
+}
